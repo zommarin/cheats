@@ -1,0 +1,4 @@
+% gcp
+
+# Login to GCP dual version
+gcloud auth login && gcloud auth application-default login

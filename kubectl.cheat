@@ -1,0 +1,5 @@
+% kgnl
+
+# Get nodes with labels
+kubectl get nodes -L cpu,ram,nvidia.com/gpu.product,nvidia.com/gpu.count
+
