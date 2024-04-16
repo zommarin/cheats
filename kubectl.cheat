@@ -1,5 +1,21 @@
-% kgnl
+% kubernetes, nodes
 
 # Get nodes with labels
 kubectl get nodes -L cpu,ram,nvidia.com/gpu.product,nvidia.com/gpu.count
 
+% kubernetes, events
+
+# Get events sorted by time
+kubectl get events --sort-by='.lastTimestamp'
+
+% kubernetes, events, watch
+
+# Get events sorted by time + watch
+kubectl get events --sort-by='.lastTimestamp' --watch
+
+% kubernetes, events, watch, pod
+
+# Events for a specific pod
+kubectl get events --field-selector involvedObject.name=<pod>,involvedObject.kind=Pod --sort-by='.lastTimestamp' --watch
+
+$ pod: kubectl get pods -o name | sed 's/pod\///'
