@@ -1,0 +1,9 @@
+% github, watch, actions
+
+# Watch github action
+gh run watch
+
+% github, release, create
+
+# Create a release in GitHub
+gh release create
